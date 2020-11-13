@@ -29,10 +29,12 @@ for content in contents:
 #case folding
 #lowercase, remove numeric value, remove punctuation, whitespace
 querywords = ""
+removestring = string.punctuation+str("“”")
+# removestring.append("“").append("”")
 for text in text_processing:
     text = text.lower()
     text = re.sub(r"\d+","",text)
-    text = text.translate(str.maketrans("","",string.punctuation)).strip()
+    text = text.translate(str.maketrans("","",removestring)).strip()
     querywords+= text+" "
 
 #stopword 
