@@ -25,7 +25,7 @@ for content in contents:
         continue
     else:
         text_processing.append(text)
-''
+
 #case folding
 #lowercase, remove numeric value, remove punctuation, whitespace
 querywords = ""
